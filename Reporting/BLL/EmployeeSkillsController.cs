@@ -17,15 +17,15 @@ namespace WorkSchedule.System.BLL
         {
             using (var context = new WorkScheduleContext())
             {
-                var results = from data in context.EmployeeSkills
-                              from ski in data.Skills
-                              orderby data.Skill
+                var results = from data in context.Skills
+                              from ski in data.EmployeeSkills
+                              orderby ski.Skill
                               select new SkillStatus
                               {
-                                  Skill = data.Skill,
-                                  Name = data.Name,
-                                  Phone = data.Phone,
-                                  YOE = data.YOE
+                                  Skill = data.Description,
+                                  // Name = data.Employee.FirstName,
+                                  // Phone = data.Phone,
+                                  // YOE = data.YOE
                               };
                 return results.ToList();
             }

@@ -8,14 +8,14 @@ namespace WorkSchedule.Data.Entities.POCOs
 {
     public class SkillStatus
     {
-        public string Skill { get; internal set; }
+        public string Skill { get;  set; }
 
-        public string Name { get; internal set; }
+        public string Name { get;  set; }
 
-        public string Phone { get; internal set; }
+        public string Phone { get;  set; }
 
-        public string Level { get; internal set; }
+        public string Level { get;  set; }
 
-        public string YOE { get; internal set; }
+        public string YOE { get;  set; }
     }
 }

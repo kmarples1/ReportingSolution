@@ -24,5 +24,7 @@ namespace WorkSchedule.Data.Entities
         public virtual Employee Employee { get; set; }
 
         public virtual Skill Skill { get; set; }
+
+        public virtual Skill Skills { get; set; }
     }
 }
