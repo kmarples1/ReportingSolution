@@ -23,6 +23,7 @@ namespace WorkSchedule.System.BLL
                              {
                                  Skill = data.Skill.Description,
                                  Name = data.Employee.FirstName + " " + data.Employee.LastName,
+                                 Phone = data.Employee.HomePhone,
                                  Level = data.Level == 1? "Novice": data.Level ==2? "Proficient": "Expert",
                                  YOE = data.YearsOfExperience
 
@@ -32,25 +33,6 @@ namespace WorkSchedule.System.BLL
             }
         }
     }
-
-    //public List<SkillStatus> GetEmployeeSkills()
-    //{
-    //    using (var context = new WorkScheduleContext())
-    //    {
-    //        var result = from emp in context.Employees
-    //                     from data in emp.EmployeeSkills
-    //                     orderby data.Skill.Description, emp.Name
-    //                     select new SkillStatus
-    //                     {
-    //                         Skill = data.Skill.Description,
-    //                         Name = emp.Name,
-    //                         Phone = emp.HomePhone,
-    //                         Level = data.Level.ToString(),
-    //                         YOE = data.YearsOfExperience 
-    //                     };
-    //        return result.ToList();
-    //    }
-    //}
 
 }
 
