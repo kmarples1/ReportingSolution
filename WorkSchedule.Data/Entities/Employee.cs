@@ -37,6 +37,6 @@ namespace WorkSchedule.Data.Entities
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Schedule> Schedules { get; set; }
 
-        public string Name { get { return $"{FirstName} {LastName}"; } }
+        //public string Name { get { return $"{FirstName} {LastName}"; } }
     }
 }

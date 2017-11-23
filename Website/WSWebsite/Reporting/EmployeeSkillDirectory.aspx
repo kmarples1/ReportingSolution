@@ -6,7 +6,7 @@
     <h1 class="page-header">Employee Skill Directory</h1>
     <div class="row">
         <div class="col-md-12">
-            <rsweb:ReportViewer ID="EmployeeSkillDirectoryRV" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
+            <rsweb:ReportViewer ID="EmployeeSkillDirectoryRV" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt" Width="1075px">
                 <LocalReport ReportPath="Reporting\EmployeeSkillDirectory.rdlc">
                     <DataSources>
                         <rsweb:ReportDataSource Name="EmployeeSkillDirectoryDS" DataSourceId="EmployeeSkillDirectoryDS"></rsweb:ReportDataSource>
