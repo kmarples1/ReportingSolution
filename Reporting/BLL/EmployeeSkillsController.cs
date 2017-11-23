@@ -18,43 +18,39 @@ namespace WorkSchedule.System.BLL
         {
             using (var context = new WorkScheduleContext())
             {
-                var result = from emp in context.Employees
-                             from data in emp.EmployeeSkills
-                             orderby data.Skill.Description, emp.LastName
+                var result = from data in context.EmployeeSkills
                              select new SkillStatus
                              {
                                  Skill = data.Skill.Description,
-                                 Name = emp.LastName,
-                                 Phone = emp.HomePhone,
-                                 Level = data.Level.ToString(),
-                                 YOE = data.YearsOfExperience 
+                                 Name = data.Employee.FirstName + " " + data.Employee.LastName,
+                                 Level = data.Level == 1? "Novice": data.Level ==2? "Proficient": "Expert",
+                                 YOE = data.YearsOfExperience
+
                              };
+
                 return result.ToList();
             }
         }
     }
 
-    //[DataObject]
-    //public class EmployeeSkillsController
+    //public List<SkillStatus> GetEmployeeSkills()
     //{
-    //    [DataObjectMethod(DataObjectMethodType.Select)]
-    //    public List<SkillStatus> GetSkillStatus()
+    //    using (var context = new WorkScheduleContext())
     //    {
-    //        using (var context = new WorkScheduleContext())
-    //        {
-    //            var results = from data in context.Skills
-    //                          from ski in data.EmployeeSkills
-    //                          orderby ski.Skill
-    //                          select new SkillStatus
-    //                          {
-    //                              Skill = data.Description,
-    //                              // Name = data.Employee.FirstName,
-    //                              // Phone = data.Phone,
-    //                              // YOE = data.YOE
-    //                          };
-    //            return results.ToList();
-    //        }
+    //        var result = from emp in context.Employees
+    //                     from data in emp.EmployeeSkills
+    //                     orderby data.Skill.Description, emp.Name
+    //                     select new SkillStatus
+    //                     {
+    //                         Skill = data.Skill.Description,
+    //                         Name = emp.Name,
+    //                         Phone = emp.HomePhone,
+    //                         Level = data.Level.ToString(),
+    //                         YOE = data.YearsOfExperience 
+    //                     };
+    //        return result.ToList();
     //    }
+    //}
 
 }
 

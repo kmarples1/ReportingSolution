@@ -9,7 +9,7 @@
             <rsweb:ReportViewer ID="EmployeeSkillDirectoryRV" runat="server" Font-Names="Verdana" Font-Size="8pt" WaitMessageFont-Names="Verdana" WaitMessageFont-Size="14pt">
                 <LocalReport ReportPath="Reporting\EmployeeSkillDirectory.rdlc">
                     <DataSources>
-                        <rsweb:ReportDataSource Name="EmployeeSkillDirectoryDataSet" DataSourceId="EmployeeSkillDirectoryDS"></rsweb:ReportDataSource>
+                        <rsweb:ReportDataSource Name="EmployeeSkillDirectoryDS" DataSourceId="EmployeeSkillDirectoryDS"></rsweb:ReportDataSource>
                     </DataSources>
                 </LocalReport>
             </rsweb:ReportViewer>
