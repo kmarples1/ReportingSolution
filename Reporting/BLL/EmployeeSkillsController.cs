@@ -47,8 +47,8 @@ namespace WorkSchedule.System.BLL
                                  Skill = data.Skill.Description,
                                  Name = emp.LastName,
                                  Phone = emp.HomePhone,
-                                 //Level = data.Level,
-                                 //YOE = data.YearsOfExperience 
+                                 Level = data.Level.ToString(),
+                                 YOE = data.YearsOfExperience 
                              };
                 return result.ToList();
             }

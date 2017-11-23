@@ -18,3 +18,13 @@ C:\Users\Zekke\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\En
 C:\Users\Zekke\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
 C:\Users\Zekke\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
 C:\Users\Zekke\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll.config
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.pdb
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.dll
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.xml
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
+C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
