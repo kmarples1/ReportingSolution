@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using WorkSchedule.Data.Entities.POCOs;
 using WorkSchedule.System.DAL;
+using WorkSchedule.Data.Entities;
 
 namespace WorkSchedule.System.BLL
 {
@@ -27,6 +28,23 @@ namespace WorkSchedule.System.BLL
                                  Level = data.Level == 1? "Novice": data.Level ==2? "Proficient": "Expert",
                                  YOE = data.YearsOfExperience
 
+                             };
+
+                return result.ToList();
+            }
+        }
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<SkillStatus> Skills_List()
+        {
+            using (var context = new WorkScheduleContext())
+            {
+                var result = from data in context.EmployeeSkills
+                             select new SkillStatus
+                             {
+                                 Skill = data.Skill.Description,
+                                 Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
+                                 YOE = data.YearsOfExperience,
+                                 HourlyWage = data.HourlyWage
                              };
 
                 return result.ToList();

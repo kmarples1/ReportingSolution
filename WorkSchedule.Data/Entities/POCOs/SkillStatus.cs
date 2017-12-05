@@ -14,5 +14,6 @@ namespace WorkSchedule.Data.Entities.POCOs
         public string Phone { get;  set; }
         public string Level { get;  set; }
         public int? YOE { get;  set; }
+        public decimal HourlyWage { get; set; }
     }
 }
