@@ -25,6 +25,5 @@ C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debu
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.xml
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb

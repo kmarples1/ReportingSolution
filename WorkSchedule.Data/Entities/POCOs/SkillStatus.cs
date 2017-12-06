@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace WorkSchedule.Data.Entities.POCOs
         public string Phone { get;  set; }
         public string Level { get;  set; }
         public int? YOE { get;  set; }
+        [Column(TypeName = "money")]
         public decimal HourlyWage { get; set; }
     }
 }

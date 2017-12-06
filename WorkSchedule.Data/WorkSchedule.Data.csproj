@@ -57,6 +57,7 @@
     <Compile Include="Entities\Entities.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\PlacementContract.cs" />
+    <Compile Include="Entities\POCOs\SkillList.cs" />
     <Compile Include="Entities\POCOs\SkillStatus.cs" />
     <Compile Include="Entities\Schedule.cs" />
     <Compile Include="Entities\Shift.cs" />

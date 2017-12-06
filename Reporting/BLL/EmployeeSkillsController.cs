@@ -34,12 +34,12 @@ namespace WorkSchedule.System.BLL
             }
         }
         [DataObjectMethod(DataObjectMethodType.Select)]
-        public List<SkillStatus> Skills_List()
+        public List<SkillList> Skills_List()
         {
             using (var context = new WorkScheduleContext())
             {
                 var result = from data in context.EmployeeSkills
-                             select new SkillStatus
+                             select new SkillList
                              {
                                  Skill = data.Skill.Description,
                                  Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
@@ -51,6 +51,19 @@ namespace WorkSchedule.System.BLL
             }
         }
     }
+
+    //[DataObjectMethod(DataObjectMethodType.Select)]
+    //public void RegisterSkill(SkillList register)
+    //{
+    //    if (register == null)
+    //        throw new ArgumentNullException("register", "Cannot register skill; skill information was not supplied.");
+        
+   
+
+    //}
+
+
+
 
 }
 
