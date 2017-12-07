@@ -40,79 +40,69 @@ namespace WorkSchedule.System.BLL
 
         //This is for my Transactions section
 
-        //Step one: List the skills
-        [DataObjectMethod(DataObjectMethodType.Select)]
-            public List<SkillSet> Skills_List()
-            {
-                using (var context = new WorkScheduleContext())
-                {
-                    var result = from data in context.EmployeeSkills
-                                 select new SkillSet
-                                 {
-                                     Skill = data.Skill.Description,
-                                     Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
-                                     YOE = data.YearsOfExperience,
-                                     HourlyWage = data.HourlyWage
-                                 };
 
-                    return result.ToList();
-                }
-            }
+
         //Step two: Allow Update / Insert of Skills
-        private void UpdatePendingOrder(SkillSet register)
-        {
-            using (var context = new WorkScheduleContext())
-            {
-                var registerInProcess = context.EmployeeSkills.Find(register.SkillID);
-                if (registerInProcess == null)
-                    throw new Exception("The order could not be found");
-                // Make the orderInProcess match the customer order as given...
-                // A) The general order information
-                registerInProcess.SkillID = register.SkillID;
-                //registerInProcess.Level = register.Level;
-                registerInProcess.YearsOfExperience = register.YOE;
-                registerInProcess.HourlyWage = register.HourlyWage;
 
 
-                // B) Add/Update/Delete order details
-                //    Loop through the items as known in the database (to update/remove)
-                foreach (var detail in registerInProcess.SkillSet)
-                {
-                    var changes = register.SkillSet.SingleOrDefault(x => x.SkillID == detail.SkillID);
-                    if (changes == null)
-                        //toRemove.Add(detail);
-                        context.Entry(detail).State = EntityState.Deleted; // flag for deletion
-                    else
-                    {
-                        detail.Discount = changes.DiscountPercent;
-                        detail.Quantity = changes.OrderQuantity;
-                        detail.UnitPrice = changes.UnitPrice;
-                        context.Entry(detail).State = EntityState.Modified;
-                    }
-                }
-                //    Loop through the new items to add to the database
-                foreach (var item in order.OrderItems)
-                {
-                    bool notPresent = !orderInProcess.OrderDetails.Any(x => x.ProductID == item.ProductId);
-                    if (notPresent)
-                    {
-                        // Add as a new item
-                        var newItem = new OrderDetail
-                        {
-                            ProductID = item.ProductId,
-                            Quantity = item.OrderQuantity,
-                            UnitPrice = item.UnitPrice,
-                            Discount = item.DiscountPercent
-                        };
-                        orderInProcess.OrderDetails.Add(newItem);
-                    }
-                }
 
-                // C) Save the changes (one save, one transaction)
-                context.Entry(orderInProcess).State = EntityState.Modified;
-                context.SaveChanges();
-            }
-        }
+
+
+
+        //private void UpdatePendingOrder(SkillSet register)
+        //{
+        //    using (var context = new WorkScheduleContext())
+        //    {
+        //        var registerInProcess = context.EmployeeSkills.Find(register.SkillID);
+        //        if (registerInProcess == null)
+        //            throw new Exception("The order could not be found");
+        //        // Make the orderInProcess match the customer order as given...
+        //        // A) The general order information
+        //        registerInProcess.SkillID = register.SkillID;
+        //        //registerInProcess.Level = register.Level;
+        //        registerInProcess.YearsOfExperience = register.YOE;
+        //        registerInProcess.HourlyWage = register.HourlyWage;
+
+
+        //        // B) Add/Update/Delete order details
+        //        //    Loop through the items as known in the database (to update/remove)
+        //        foreach (var detail in registerInProcess.SkillSet)
+        //        {
+        //            var changes = register.SkillSet.SingleOrDefault(x => x.SkillID == detail.SkillID);
+        //            if (changes == null)
+        //                //toRemove.Add(detail);
+        //                context.Entry(detail).State = EntityState.Deleted; // flag for deletion
+        //            else
+        //            {
+        //                detail.Discount = changes.DiscountPercent;
+        //                detail.Quantity = changes.OrderQuantity;
+        //                detail.UnitPrice = changes.UnitPrice;
+        //                context.Entry(detail).State = EntityState.Modified;
+        //            }
+        //        }
+        //        //    Loop through the new items to add to the database
+        //        foreach (var item in order.OrderItems)
+        //        {
+        //            bool notPresent = !orderInProcess.OrderDetails.Any(x => x.ProductID == item.ProductId);
+        //            if (notPresent)
+        //            {
+        //                // Add as a new item
+        //                var newItem = new OrderDetail
+        //                {
+        //                    ProductID = item.ProductId,
+        //                    Quantity = item.OrderQuantity,
+        //                    UnitPrice = item.UnitPrice,
+        //                    Discount = item.DiscountPercent
+        //                };
+        //                orderInProcess.OrderDetails.Add(newItem);
+        //            }
+        //        }
+
+        //        // C) Save the changes (one save, one transaction)
+        //        context.Entry(orderInProcess).State = EntityState.Modified;
+        //        context.SaveChanges();
+        //    }
+        //}
 
 
 

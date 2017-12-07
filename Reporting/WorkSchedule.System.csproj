@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EmployeeSkillsController.cs" />
+    <Compile Include="BLL\SkillsController.cs" />
     <Compile Include="DAL\WorkScheduleContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
