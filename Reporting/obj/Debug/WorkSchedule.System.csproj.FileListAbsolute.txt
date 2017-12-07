@@ -23,3 +23,15 @@ C:\Users\kmarples1\Documents\GitHub\ReportingSolution\Reporting\bin\Debug\Entity
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.csprojResolveAssemblyReference.cache
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.dll
 C:\Users\kmarples1\Documents\GitHub\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.pdb
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll.config
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.pdb
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\EntityFramework.dll
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.dll
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.pdb
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\EntityFramework.xml
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.csprojResolveAssemblyReference.cache
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.dll
+C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.pdb
