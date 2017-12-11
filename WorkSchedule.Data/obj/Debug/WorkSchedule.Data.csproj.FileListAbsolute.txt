@@ -34,6 +34,6 @@ C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFrame
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.xml
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
+C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache

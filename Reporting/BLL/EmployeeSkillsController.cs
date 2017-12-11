@@ -41,12 +41,12 @@ namespace WorkSchedule.System.BLL
         //This is for my Transactions section
 
         //Step one: List the skills
-        [DataObjectMethod(DataObjectMethodType.Select)]
+        [DataObjectMethod(DataObjectMethodType.Select,false)]
             public List<SkillSet> Skills_List()
             {
                 using (var context = new WorkScheduleContext())
                 {
-                    var result = from data in context.EmployeeSkills
+                    var results = from data in context.EmployeeSkills
                                  select new SkillSet
                                  {
                                      Skill = data.Skill.Description,
@@ -55,112 +55,55 @@ namespace WorkSchedule.System.BLL
                                      HourlyWage = data.HourlyWage
                                  };
 
-                    return result.ToList();
+                    return results.ToList();
                 }
             }
-        //Step two: Allow Update / Insert of Skills
-        private void UpdatePendingOrder(SkillSet register)
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<Skill> ListAllSkills()
         {
             using (var context = new WorkScheduleContext())
             {
-                var registerInProcess = context.EmployeeSkills.Find(register.SkillID);
-                if (registerInProcess == null)
-                    throw new Exception("The order could not be found");
-                // Make the orderInProcess match the customer order as given...
-                // A) The general order information
-                registerInProcess.SkillID = register.SkillID;
-                //registerInProcess.Level = register.Level;
-                registerInProcess.YearsOfExperience = register.YOE;
-                registerInProcess.HourlyWage = register.HourlyWage;
-
-
-                // B) Add/Update/Delete order details
-                //    Loop through the items as known in the database (to update/remove)
-                foreach (var detail in registerInProcess.SkillSet)
-                {
-                    var changes = register.SkillSet.SingleOrDefault(x => x.SkillID == detail.SkillID);
-                    if (changes == null)
-                        //toRemove.Add(detail);
-                        context.Entry(detail).State = EntityState.Deleted; // flag for deletion
-                    else
-                    {
-                        detail.Discount = changes.DiscountPercent;
-                        detail.Quantity = changes.OrderQuantity;
-                        detail.UnitPrice = changes.UnitPrice;
-                        context.Entry(detail).State = EntityState.Modified;
-                    }
-                }
-                //    Loop through the new items to add to the database
-                foreach (var item in order.OrderItems)
-                {
-                    bool notPresent = !orderInProcess.OrderDetails.Any(x => x.ProductID == item.ProductId);
-                    if (notPresent)
-                    {
-                        // Add as a new item
-                        var newItem = new OrderDetail
-                        {
-                            ProductID = item.ProductId,
-                            Quantity = item.OrderQuantity,
-                            UnitPrice = item.UnitPrice,
-                            Discount = item.DiscountPercent
-                        };
-                        orderInProcess.OrderDetails.Add(newItem);
-                    }
-                }
-
-                // C) Save the changes (one save, one transaction)
-                context.Entry(orderInProcess).State = EntityState.Modified;
-                context.SaveChanges();
+                return context.Skills.ToList();
             }
         }
 
 
+        //Step two: Allow Insert of Skills
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public void Register_Employee(Employee employee, List<SkillSet> SkillSet)
+        {
+
+            //if (employee == null)
+            //    throw new ArgumentNullException("employee", "Cannot insert skills, employee not given");
+
+            using (var context = new WorkScheduleContext())
+            {
+
+                var newSkills = new EmployeeSkills()
+                {
+                    FirstName = employee.FirstName,
+                    LastName = employee.LastName,
+                    HomePhone = employee.HomePhone,
+
+                    Skill = from item in newSkills.EmployeeSkills
+                            select new SkillSet
+                            {
+                                        employee.SkillID,
+                                     Level = employee.Level == 1 ? "Novice" : employee.Level == 2 ? "Proficient" : "Expert",
+                    YearsOfExperience = employee.YearsOfExperience,
+                    HourlyWage = employee.HourlyWage
+                            }
 
 
-        //public void Register_Employee(SkillSet register)
-        //{
+                };
+                    context.EmployeeSkills.Add(newSkills);
+           
+                    context.SaveChanges();
 
-
-        //    if (register == null)
-        //        throw new ArgumentNullException("register", "Cannot place skills; register information was not supplied.");
-
-
-        //    using (var context = new WorkScheduleContext())
-        //    {
-        //        var employee = context.EmployeeSkills.Add(new EmployeeSkill());
-        //        if(employee == null)
-        //            throw new Exception("Skill does not exist");
-
-        //        var Registering = context.EmployeeSkills.Find(register.SkillID);
-        //        if (Registering == null)
-        //            Registering = context.EmployeeSkills.Add(new EmployeeSkill());
-
-        //        // match this to employee entry as given...
-        //        Registering.SkillID = register.SkillID;
-        //        //Registering.Level = register.Level;
-        //        Registering.YearsOfExperience = register.YOE;
-        //        Registering.HourlyWage = register.HourlyWage;
-
-
-        //        foreach (var item in register.Employee)
-        //        {
-        //            if (!orderInProcess.OrderDetails.Any(x => x.ProductID == item.ProductId))
-        //            {
-        //                // Add as a new item
-        //                var newItem = new OrderDetail
-        //                {
-        //                    ProductID = item.ProductId,
-        //                    Quantity = item.OrderQuantity,
-        //                    UnitPrice = item.UnitPrice,
-        //                    Discount = item.DiscountPercent
-        //                };
-        //                orderInProcess.OrderDetails.Add(newItem);
-        //            }
-        //        }
-        //        context.SaveChanges();
-        //    }
-        //}
-
+            }
+              
+        }
     }
 }
 
