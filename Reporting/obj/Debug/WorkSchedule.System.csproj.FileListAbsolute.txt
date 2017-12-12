@@ -35,3 +35,27 @@ C:\Users\Zekke\Desktop\ReportingSolution\Reporting\bin\Debug\EntityFramework.Sql
 C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.csprojResolveAssemblyReference.cache
 C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.dll
 C:\Users\Zekke\Desktop\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.pdb
+E:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.csprojResolveAssemblyReference.cache
+E:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.dll
+E:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.pdb
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll.config
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.pdb
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.dll
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.dll
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.dll
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.pdb
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.xml
+E:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.xml
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll.config
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.dll
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.System.pdb
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.dll
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.dll
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.dll
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\WorkSchedule.Data.pdb
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.xml
+D:\NAIT Fall 2017\ReportingSolution\Reporting\bin\Debug\EntityFramework.SqlServer.xml
+D:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.csprojResolveAssemblyReference.cache
+D:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.dll
+D:\NAIT Fall 2017\ReportingSolution\Reporting\obj\Debug\WorkSchedule.System.pdb

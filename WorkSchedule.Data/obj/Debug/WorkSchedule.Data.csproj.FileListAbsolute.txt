@@ -36,4 +36,23 @@ C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFrame
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll.config
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.pdb
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.dll
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.xml
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
+E:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll.config
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.dll
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\WorkSchedule.Data.pdb
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.dll
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.xml
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
+D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
 C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache

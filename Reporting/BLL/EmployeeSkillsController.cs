@@ -41,70 +41,118 @@ namespace WorkSchedule.System.BLL
         //This is for my Transactions section
 
         //Step one: List the skills
-        [DataObjectMethod(DataObjectMethodType.Select,false)]
-            public List<SkillSet> Skills_List()
-            {
-                using (var context = new WorkScheduleContext())
-                {
-                    var results = from data in context.EmployeeSkills
-                                 select new SkillSet
-                                 {
-                                     Skill = data.Skill.Description,
-                                     Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
-                                     YOE = data.YearsOfExperience,
-                                     HourlyWage = data.HourlyWage
-                                 };
-
-                    return results.ToList();
-                }
-            }
-
-        [DataObjectMethod(DataObjectMethodType.Select, false)]
-        public List<Skill> ListAllSkills()
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<SkillSet> SkillsList()
         {
             using (var context = new WorkScheduleContext())
             {
-                return context.Skills.ToList();
+                var results = from data in context.EmployeeSkills
+                              select new SkillSet
+                              {
+                                  Skill = data.Skill.Description,                        
+                                  //Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
+                                  //YOE = data.YearsOfExperience,
+                                  //HourlyWage = data.HourlyWage
+                              };
+
+                return results.ToList();
             }
         }
 
+        [DataObjectMethod(DataObjectMethodType.Select)]
+        public List<SkillSet> ListLevel()
+        {
+            using (var context = new WorkScheduleContext())
+            {
+                var results = from data in context.EmployeeSkills
+                              select new SkillSet
+                              {
+                                  Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert"
+                              };
+                return results.ToList();
+            }
+
+        }
+     
+            
+        
+
+        //Transaction
+        public void Register_Employee(Employee employee, List<EmployeeSkill> skillset)
+        {
+            using (var context = new WorkScheduleContext())
+            {
+                employee.Active = true;
+
+                employee = context.Employees.Add(employee);
+
+                foreach(EmployeeSkill skill in skillset)
+                {
+                    skill.EmployeeID = employee.EmployeeID;
+                    context.EmployeeSkills.Add(skill);
+                }
+
+                 context.SaveChanges();
+            }
+        }
 
         //Step two: Allow Insert of Skills
-        [DataObjectMethod(DataObjectMethodType.Select)]
-        public void Register_Employee(Employee employee, List<SkillSet> SkillSet)
-        {
+        //        [DataObjectMethod(DataObjectMethodType.Select)]
+        //        public void Register_Employee(Employee employee, List<SkillSet> SkillSet)
+        //        {
 
-            //if (employee == null)
-            //    throw new ArgumentNullException("employee", "Cannot insert skills, employee not given");
+        //    //if (employee == null)
+        //    //    throw new ArgumentNullException("employee", "Cannot insert skills, employee not given");
 
-            using (var context = new WorkScheduleContext())
-            {
+        //    using (var context = new WorkScheduleContext())
+        //    {
 
-                var newSkills = new EmployeeSkills()
-                {
-                    FirstName = employee.FirstName,
-                    LastName = employee.LastName,
-                    HomePhone = employee.HomePhone,
+        //        var emp = context.Employees.Find(employee.EmployeeID);
+        //        if (emp == null)
+        //            throw new Exception("Employee does not exist");
+        //        var skillsInProcess = context.EmployeeSkills.Find(SkillSet.SkillID);
+        //        if (skillsInProcess == null)
+        //            skillsInProcess = context.EmployeeSkills.Add(new EmployeeSkill());
+        //        else
+        //            throw new Exception("Skills already there.");
+        //        skillsInProcess.Employee.FirstName = employee.FirstName;
+        //        skillsInProcess.Employee.LastName = employee.LastName;
+        //        skillsInProcess.Employee.HomePhone = employee.HomePhone;
 
-                    Skill = from item in newSkills.EmployeeSkills
-                            select new SkillSet
-                            {
-                                        employee.SkillID,
-                                     Level = employee.Level == 1 ? "Novice" : employee.Level == 2 ? "Proficient" : "Expert",
-                    YearsOfExperience = employee.YearsOfExperience,
-                    HourlyWage = employee.HourlyWage
-                            }
+        //        skillsInProcess.SkillID = SkillSet.SkillID;
+        //        skillsInProcess.Level = SkillSet.Level;
+        //        skillsInProcess.YearsOfExperience = SkillSet.YOE;
+        //        skillsInProcess.HourlyWage = SkillSet.HourlyWage;
+
+        //        foreach (var detail in skillsInProcess.Skills)
+        //        {
+
+        //        }
+
+        //        var newSkills = new EmployeeSkills()
+        //        {
+        //            FirstName = employee.FirstName,
+        //            LastName = employee.LastName,
+        //            HomePhone = employee.HomePhone,
+
+        //            Skill = from item in newSkills.EmployeeSkills
+        //                    select new SkillSet
+        //                            {
+        //                                employee.SkillID,
+        //                                Level = employee.Level == 1 ? "Novice" : employee.Level == 2 ? "Proficient" : "Expert",
+        //                                YearsOfExperience = employee.YearsOfExperience,
+        //                                HourlyWage = employee.HourlyWage
+        //                            }
 
 
-                };
-                    context.EmployeeSkills.Add(newSkills);
-           
-                    context.SaveChanges();
+        //        };
+        //        context.EmployeeSkills.Add(newSkills);
 
-            }
-              
-        }
+        //        context.SaveChanges();
+
+        //    }
+
+        //}
     }
 }
-
 
