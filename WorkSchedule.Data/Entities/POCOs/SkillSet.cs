@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WorkSchedule.Data.Entities.POCOs
 {
-    public class SkillSet : EmployeeSkill
+    public class SkillSet
     {
         public string Skill { get; set; }
         public string FirstName { get; set; }

@@ -49,7 +49,7 @@ public partial class TransactionExercise_Transaction : System.Web.UI.Page
         var YOE = container.FindControl("YOE") as TextBox;
         var HourlyWage = container.FindControl("HourlyWage") as TextBox;
 
-        EmployeeSkill skillset = new SkillSet
+        var skillset = new SkillSet
         {
             FirstName = employee.FirstName,
             LastName = employee.LastName,

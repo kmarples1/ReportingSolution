@@ -55,4 +55,3 @@ D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\bin\Debug\EntityFramework.
 D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
 D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.dll
 D:\NAIT Fall 2017\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.pdb
-C:\Users\Zekke\Desktop\ReportingSolution\WorkSchedule.Data\obj\Debug\WorkSchedule.Data.csprojResolveAssemblyReference.cache
