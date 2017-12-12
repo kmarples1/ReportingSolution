@@ -22,14 +22,8 @@ namespace WorkSchedule.System.BLL
                               select new SkillSet
                               {
                                   Skill = data.SkillID.ToString(),
-                                 // Description = data.Description
+                                  Description = data.Description
                               };
-                                 //{
-                                 //    Skill = data.Skill.Description,
-                                 //    Level = data.Level == 1 ? "Novice" : data.Level == 2 ? "Proficient" : "Expert",
-                                 //    YOE = data.YearsOfExperience,
-                                 //    HourlyWage = data.HourlyWage
-                                 //};
 
                 return results.ToList();
             }

@@ -28,7 +28,34 @@
 <div class="row">
      <asp:Panel ID="EmployeeSkillPanel" runat="server" CssClass="col-md-6" Visible="true">
         <div class="row">
-            <asp:ListView ID="SkillsLV" runat="server" ItemType="WorkSchedule.Data.Entities.POCOs.SkillSet" OnItemCommand="SkillsListView_Command" OnLayoutCreated="SkillsListView_LayoutCreated" DataSourceID="SkillODS">
+            <asp:ListView ID="newSkillsLV" runat="server" DataSourceID="SkillODS"></asp:ListView>
+
+
+            <asp:ObjectDataSource ID="SkillODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="Skills_List" TypeName="WorkSchedule.System.BLL.SkillsController"></asp:ObjectDataSource>
+            <asp:ObjectDataSource ID="LevelODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListLevel" TypeName="WorkSchedule.System.BLL.EmployeeSkillController"></asp:ObjectDataSource>
+
+
+
+            <asp:Label ID="Label1" runat="server" Text="YOE" AssociatedControlID="YOE" />
+            <asp:TextBox ID="YOE" runat="server"></asp:TextBox>                         
+            <asp:Label ID="Label2" runat="server" Text="HourlyWage" AssociatedControlID="HourlyWage" />
+            <asp:TextBox ID="HourlyWage" runat="server"></asp:TextBox>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%--            <asp:ListView ID="SkillsLV" runat="server" ItemType="WorkSchedule.Data.Entities.POCOs.SkillSet" OnItemCommand="SkillsListView_Command" OnLayoutCreated="SkillsListView_LayoutCreated" DataSourceID="SkillODS">
                 <LayoutTemplate>
                     <table runat="server">
                         <tr runat="server">
@@ -97,7 +124,7 @@
                 </ItemTemplate>
             </asp:ListView>
             <asp:ObjectDataSource ID="SkillODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="Skills_List" TypeName="WorkSchedule.System.BLL.SkillsController">
-            </asp:ObjectDataSource>
+            </asp:ObjectDataSource>--%>
         </div>
 </asp:Panel>
     </div>

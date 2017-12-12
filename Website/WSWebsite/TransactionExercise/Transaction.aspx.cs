@@ -40,7 +40,7 @@ public partial class TransactionExercise_Transaction : System.Web.UI.Page
         //    throw new ArgumentException("HourlyWage", "Cannot insert without entering the hourly wage.");
 
 
-        var container = SkillsLV.InsertItem;
+        var container = newSkillsLV.InsertItem;
 
         var FirstName = container.FindControl("FirstName") as TextBox;
         var LastName = container.FindControl("LastName") as TextBox;

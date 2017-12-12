@@ -73,10 +73,7 @@ namespace WorkSchedule.System.BLL
             }
 
         }
-     
-            
-        
-
+                 
         //Transaction
         public void Register_Employee(Employee employee, List<EmployeeSkill> skillset)
         {
