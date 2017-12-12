@@ -13,9 +13,11 @@ namespace WorkSchedule.Data.Entities.POCOs
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
-        public int SkillID { get; set; }
+
+        public virtual ICollection<EmployeeSkill> SkillID { get; set; }
+        public virtual ICollection<EmployeeSkill> Level { get; set; }
         public string Description { get; set; }
-        public string Level { get; set; }
+
         public int? YOE { get; set; }
         [Column(TypeName = "money")]
         public decimal HourlyWage { get; set; }

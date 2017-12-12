@@ -20,7 +20,7 @@ public partial class TransactionExercise_Transaction : System.Web.UI.Page
 
         Employee employee = new Employee();
 
-        if (employee != null)
+        if (employee.Active == true)
             throw new ArgumentNullException("employee", "Cannot register skills, employee exists");
         if (employee.FirstName == null)
             throw new ArgumentException("FirstName", "Cannot insert without a first name");
@@ -45,6 +45,7 @@ public partial class TransactionExercise_Transaction : System.Web.UI.Page
         var FirstName = container.FindControl("FirstName") as TextBox;
         var LastName = container.FindControl("LastName") as TextBox;
         var Phone = container.FindControl("Phone") as TextBox;
+        var Skill = container.FindControl("Skill") as CheckBox;
         var Level = container.FindControl("Level") as RadioButtonList;
         var YOE = container.FindControl("YOE") as TextBox;
         var HourlyWage = container.FindControl("HourlyWage") as TextBox;
@@ -54,7 +55,8 @@ public partial class TransactionExercise_Transaction : System.Web.UI.Page
             FirstName = employee.FirstName,
             LastName = employee.LastName,
             Phone = employee.HomePhone,
-            Level = Level.SelectedValue,
+            Skill = SkillCheckBox.Visible;
+            Level = Level.SelectedIndex,
             YOE = int.Parse("YOE"),
             HourlyWage = decimal.Parse(HourlyWage.Text)
         };

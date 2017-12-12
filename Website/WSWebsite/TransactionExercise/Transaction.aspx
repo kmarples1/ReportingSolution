@@ -52,8 +52,8 @@
                     <tr style="">
                         <td>
                             <asp:TextBox Text='<%# Bind("Skill") %>' runat="server" ID="SkillTextBox" /></td>
-
                         <td>
+                            <asp:CheckBox ID="SkillCheckBox" runat="server" />
                             <asp:TextBox Text='<%# Bind("SkillID") %>' runat="server" ID="SkillIDTextBox" /></td>
                         <td>
                             <asp:TextBox Text='<%# Bind("Description") %>' runat="server" ID="DescriptionTextBox" /></td>
@@ -64,30 +64,50 @@
                         <td>
                             <asp:Label Text='<%# Eval("Skill") %>' runat="server" ID="SkillLabel" /></td>
                         <td>
-                            <asp:Label Text='<%# Eval("FirstName") %>' runat="server" ID="FirstNameLabel" /></td>
-                        <td>
-                            <asp:Label Text='<%# Eval("LastName") %>' runat="server" ID="LastNameLabel" /></td>
-                        <td>
-                            <asp:Label Text='<%# Eval("Phone") %>' runat="server" ID="PhoneLabel" /></td>
-                        <td>
                             <asp:Label Text='<%# Eval("SkillID") %>' runat="server" ID="SkillIDLabel" /></td>
                         <td>
                             <asp:Label Text='<%# Eval("Description") %>' runat="server" ID="DescriptionLabel" /></td>
-                        <td>
-                            <asp:Label Text='<%# Eval("Level") %>' runat="server" ID="LevelLabel" /></td>
-                        <td>
-                            <asp:Label Text='<%# Eval("YOE") %>' runat="server" ID="YOELabel" /></td>
-                        <td>
-                            <asp:Label Text='<%# Eval("HourlyWage") %>' runat="server" ID="HourlyWageLabel" /></td>
                     </tr>
                 </ItemTemplate>
             </asp:ListView>
-            <asp:ListView ID="LevelLV" runat="server" DataSourceID="LevelODS"></asp:ListView>
-
+            <asp:ListView ID="LevelLV" runat="server" DataSourceID="LevelODS">
+                <InsertItemTemplate>
+                        <td>
+                            <asp:TextBox Text='<%# Bind("Level") %>' runat="server" ID="LevelTextBox" /></td>
+                    </tr>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label Text='<%# Eval("Level") %>' runat="server" ID="LevelLabel" /></td>
+                    </tr>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <table runat="server">
+                        <tr runat="server">
+                            <td runat="server">
+                                <table runat="server" id="itemPlaceholderContainer" style="" border="0">
+                                    <tr runat="server" style="">
+                                        <th runat="server">Level</th>
+                                    </tr>
+                                    <tr runat="server" id="itemPlaceholder"></tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr runat="server">
+                            <td runat="server" style=""></td>
+                        </tr>
+                    </table>
+                </LayoutTemplate>
+                <SelectedItemTemplate>
+                    <tr style="">
+                        <td>
+                            <asp:Label Text='<%# Eval("Level") %>' runat="server" ID="LevelLabel" /></td>
+                    </tr>
+                </SelectedItemTemplate>
+            </asp:ListView>
             <asp:ObjectDataSource ID="SkillODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="Skills_List" TypeName="WorkSchedule.System.BLL.SkillsController"></asp:ObjectDataSource>
             <asp:ObjectDataSource ID="LevelODS" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListLevel" TypeName="WorkSchedule.System.BLL.EmployeeSkillController"></asp:ObjectDataSource>
-
-
 
             <asp:Label ID="Label1" runat="server" Text="YOE" AssociatedControlID="YOE" />
             <asp:TextBox ID="YOE" runat="server"></asp:TextBox>                         

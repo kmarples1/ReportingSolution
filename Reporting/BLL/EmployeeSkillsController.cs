@@ -77,7 +77,7 @@ namespace WorkSchedule.System.BLL
             
     
         //Transaction
-        public void Register_Employee(Employee employee, List<EmployeeSkill> skillset)
+        public void Register_Employee(Employee employee, List<SkillSet> skillset)
         {
             using (var context = new WorkScheduleContext())
             {
@@ -85,10 +85,12 @@ namespace WorkSchedule.System.BLL
 
                 employee = context.Employees.Add(employee);
 
-                foreach(EmployeeSkill skill in skillset)
+                foreach(SkillSet skill in skillset)
                 {
-                    skill.EmployeeID = employee.EmployeeID;
-                    context.EmployeeSkills.Add(skill);
+                    var newSkill = new EmployeeSkill();
+
+                    newSkill.EmployeeID = employee.EmployeeID;
+                    context.EmployeeSkills.Add(newSkill);
                 }
 
                  context.SaveChanges();
